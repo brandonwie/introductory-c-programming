@@ -41,7 +41,7 @@ int main(void) {
   //finally, print "That triangle had %d total stars\n", such that the %d 
   printf("That triangle had %d total starts\n", numStars);
   //prints the value of numStars
-  printf("%d\n", numStars);
+  //printf("%d\n", numStars);
 
   return 0;
 }
