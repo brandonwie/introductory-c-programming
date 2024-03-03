@@ -49,7 +49,8 @@ rectangle intersection(rectangle r1, rectangle r2) {
 
   r.width = right - r.x;
   r.height = top - y.r;
-  return r1;
+
+  return r;
 }
 
 //You should not need to modify any code below this line
