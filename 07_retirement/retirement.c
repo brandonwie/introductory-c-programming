@@ -9,18 +9,17 @@ struct _retire_info {
 
 typedef struct _retire_info retire_info;
 
-void compute_balance(int startAge, double initial, retire_info info) {
+void compute_balance(int startAge, double *initial, retire_info info) {
   for (int i = 0; i < info.months; i++) {
-    printf("Age %3d month %2d you have $%.2lf\n", (startAge + i) / 12, (startAge + i) % 12, initial);
-    initial += initial * info.rate_of_return + info.contribution;
+    printf("Age %3d month %2d you have $%.2lf\n", (startAge + i) / 12, (startAge + i) % 12, *initial);
+    *initial += *initial * info.rate_of_return + info.contribution;
   }
 }
 
 void retirement(int startAge, double initial, retire_info working, retire_info retired) {
-  compute_balance(startAge, initial, working);
+  compute_balance(startAge, &initial, working);
   startAge += working.months;
-  initial += working.months * working.contribution; // Adjust initial for retirement phase
-  compute_balance(startAge, initial, retired);
+  compute_balance(startAge, &initial, retired);
 }
 
 int main(void) {
