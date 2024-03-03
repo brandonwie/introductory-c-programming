@@ -1,9 +1,13 @@
-Grading at Sun 03 Mar 2024 08:34:17 AM UTC
+Grading at Sun 03 Mar 2024 08:37:44 AM UTC
 Attempting to compile rectangle.c
-rectangle.c: In function ‘intersection’:
-rectangle.c:51:12: error: expected expression before ‘void’
-   51 |     return void;
-      |            ^~~~
-The code did not compile!
+Tring to run rectangle
+Your file matched the expected output
+removing your main() and replacing it with out own to run more tests...
+#################################################
+testcase1:
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
 
-Overall Grade: F
+Overall Grade: A
