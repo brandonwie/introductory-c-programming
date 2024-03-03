@@ -16,6 +16,9 @@ int max (int a, int b) {
 }
 
 //Declare your rectangle structure here!
+typedef struct rectangle_t {
+  int x, y, width, height;
+} rectangle;
 
 
 rectangle canonicalize(rectangle r) {
@@ -30,6 +33,7 @@ rectangle canonicalize(rectangle r) {
   }
   return r;
 }
+
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
   rectangle r;
