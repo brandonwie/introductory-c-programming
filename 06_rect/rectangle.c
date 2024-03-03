@@ -48,11 +48,12 @@ rectangle intersection(rectangle r1, rectangle r2) {
   int top = min(r1Top, r2Top);
 
   if (r.x > right || r.y > top) {
-    return void;
-  }  
-
-  r.width = right - r.x;
-  r.height = top - r.y;
+    r.width = 0;
+    r.height = 0;
+  } else {
+    r.width = right - r.x;
+    r.height = top - r.y;
+  } 
 
   return r;
 }
