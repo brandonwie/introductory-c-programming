@@ -20,10 +20,35 @@ int max (int a, int b) {
 
 rectangle canonicalize(rectangle r) {
   //WRITE THIS FUNCTION
+  if (r.width < 0) {
+	  r.x += r.width;
+	  r.width = -r.width;
+  }
+  if (r.height < 0) {
+  	r.y += r.height;
+	r.height = -r.height;
+  }
   return r;
 }
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
+  rectangle r;
+  r1 = canonicalize(r1);
+  r2 = canonicalize(r2);
+
+  r.x = max(r1.x, r2.x);
+  r.y = max(r1.y, r2.y);
+  int r1Right = r1.x + r1.width, r2Right = r2.x + r2.width;
+  int r1Top = r1.y + r1.height, r2Top = r2.y + r2.height;
+  int right = min(r1Right, r2Right);
+  int top = min(r1Top, r2Top);
+
+  if (r.x > right || r.y > top) {
+    return (rectangle)(0,0,0,0);
+  }  
+
+  r.width = right - r.x;
+  r.height = top - y.r;
   return r1;
 }
 
