@@ -52,7 +52,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
   }  
 
   r.width = right - r.x;
-  r.height = top - y.r;
+  r.height = top - r.y;
 
   return r;
 }
