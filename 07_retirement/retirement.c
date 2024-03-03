@@ -5,7 +5,7 @@ struct _retire_info {
   int months;
   double contribution;
   double rate_of_return;
-} 
+};
 
 typedef struct _retire_info retire_info;
 
@@ -23,7 +23,7 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   compute_balance(startAge, initial, retired);
 }
 
-int main() {
+int main(void) {
   retire_info working = {489, 1000, 0.045/12};
   retire_info retired = {384, -4000, 0.01/12};
   int startAge = 327; // 27 years and 3 months
