@@ -48,7 +48,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
   int top = min(r1Top, r2Top);
 
   if (r.x > right || r.y > top) {
-    return (rectangle)(0,0,0,0);
+    return void;
   }  
 
   r.width = right - r.x;
