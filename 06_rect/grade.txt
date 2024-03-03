@@ -1,4 +1,4 @@
-Grading at Sun 03 Mar 2024 08:31:33 AM UTC
+Grading at Sun 03 Mar 2024 08:33:17 AM UTC
 Attempting to compile rectangle.c
 rectangle.c: In function ‘intersection’:
 rectangle.c:51:25: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
@@ -13,10 +13,6 @@ rectangle.c:51:29: error: left-hand operand of comma expression has no effect [-
 rectangle.c:51:5: error: conversion to non-scalar type requested
    51 |     return (rectangle)(0,0,0,0);
       |     ^~~~~~
-rectangle.c:55:20: error: ‘y’ undeclared (first use in this function)
-   55 |   r.height = top - y.r;
-      |                    ^
-rectangle.c:55:20: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 The code did not compile!
 
