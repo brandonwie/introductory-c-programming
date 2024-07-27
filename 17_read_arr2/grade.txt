@@ -1,0 +1,8 @@
+Grading at Sat 27 Jul 2024 05:02:47 AM UTC
+Attempting to compile test.c
+gcc -Wall -Wextra -o test test.c
+compiled
+Your file matched the expected output
+Your output matched what we expected
+
+Overall Grade: A
